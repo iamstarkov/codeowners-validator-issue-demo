@@ -1,5 +1,6 @@
 name: Code Owners Validation
 on:
+  push:
   pull_request:
 
 concurrency:
@@ -9,7 +10,6 @@ concurrency:
 jobs:
   validate:
     name: Validate
-    runs-on: [ self-hosted, docker ]
     permissions:
       contents: 'read'
     steps:
