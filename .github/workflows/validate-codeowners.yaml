@@ -1,7 +1,6 @@
 name: Code Owners Validation
 on:
-  push:
-  pull_request:
+  push
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
