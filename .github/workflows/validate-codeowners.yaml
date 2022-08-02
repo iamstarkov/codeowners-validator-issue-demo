@@ -19,5 +19,5 @@ jobs:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
         checks: "files,owners,duppatterns,syntax,"
         experimental_checks: "notowned,avoid-shadowing"
-        owner_checker_owners_must_be_teams: true
+        # owner_checker_owners_must_be_teams: true
         not_owned_checker_subdirectories: 'packages/demo/'
