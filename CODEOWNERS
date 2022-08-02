@@ -15,4 +15,4 @@
 
 
 # Current configuration leaves files in /packages/demo/src/not-owned folder not owned, but validator fails to throw an error
-# /packages/a/src/not-owned @iamstarkov
+# /packages/demo/src/not-owned @iamstarkov
