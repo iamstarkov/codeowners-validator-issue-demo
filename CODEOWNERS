@@ -4,7 +4,7 @@
 # `docs/getting-started.md` but not further nested files like
 # `docs/build-app/troubleshooting.md`.
 # docs/*  docs@example.com
-/packages/demo/* @iamstarkov
+# /packages/demo/* @iamstarkov
 
 
 # In this example, @doctocat owns any files in the build/logs
