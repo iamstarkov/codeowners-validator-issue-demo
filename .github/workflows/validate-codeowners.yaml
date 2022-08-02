@@ -9,6 +9,7 @@ concurrency:
 jobs:
   validate:
     name: Validate
+    runs-on: ubuntu-latest
     permissions:
       contents: 'read'
     steps:
