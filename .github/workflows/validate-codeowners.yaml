@@ -1,0 +1,22 @@
+name: Code Owners Validation
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: [ self-hosted, docker ]
+    permissions:
+      contents: 'read'
+    steps:
+    - uses: actions/checkout@v3
+    - uses: mszostok/codeowners-validator@v0.7.4
+      with:
+        checks: "files,owners,duppatterns,syntax,"
+        experimental_checks: "notowned,avoid-shadowing"
+        owner_checker_owners_must_be_teams: true
+        not_owned_checker_subdirectories: 'packages/demo/'
