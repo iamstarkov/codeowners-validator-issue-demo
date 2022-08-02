@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: mszostok/codeowners-validator@v0.7.4
       with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
         checks: "files,owners,duppatterns,syntax,"
         experimental_checks: "notowned,avoid-shadowing"
         owner_checker_owners_must_be_teams: true
